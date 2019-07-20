@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href=https://cdn1.iconfinder.com/data/icons/social-media-vol-1/24/_w-512.png type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <title>Ordem Numérica</title>
+    <style>
+      body{
+        background-image: radial-gradient(circle, #e66465, #9198e5);      
+      }
+        .text-3d {
+          text-transform: uppercase;
+          font-size: 50px;
+          color:#eee;
+          position: relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50% ,-50%);
+          text-shadow:
+                          0 1px 0 rgb(190,190,190),
+                          0 2px 0 rgb(185,185,185),
+                          0 3px 0 rgb(180,180,180),
+                          0 4px 0 rgb(175,175,175),
+                          0 5px 0 rgb(170,170,170),
+                          0 6px 0 rgb(165,165,165),
+                          0 7px 0 rgb(160,160,160),
+                          0 1px 5px rgba(0,0,0,.05),
+                          0 3px 5px rgba(0,0,0,.10),
+                          0 5px 10px rgba(0,0,0,.15),
+                          0 7px 10px rgba(0,0,0,.20),
+                          0 10px 15px rgba(0,0,0,.25);
+          transition: all 0.3s ease-in-out;        
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <center>
+    <p>Wallace Boone Haese - 20181116271</p>
+    <br><h1 class="text-3d">Ordem Numérica</h1> 
+      <b><p>Normal: <input type="text" name="desorg" id="desorg"></p>    
+      <b><p>Organizados: <input name="organ" id="organ"></p>
+      
+
+  <script>
+    var numeros = [9, 5, 3, 1, 7, 10, 6];
+    document.getElementById('desorg').value = numeros ;
+
+    numeros.sort(organizado);
+    function organizado(a, b){
+      return a - b;
+    }
+
+    document.getElementById('organ').value = numeros;
+  </script>
+
+
+    </center>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.js"></script>
+    </footer>
+  </body>
+</html>

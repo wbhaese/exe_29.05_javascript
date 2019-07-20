@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href=https://cdn1.iconfinder.com/data/icons/social-media-vol-1/24/_w-512.png type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <title>Ordem Numérica</title>
+    <style>
+      body{
+        background-image: radial-gradient(circle, #d6cfc7, #ce9c63);      
+        }
+        .text-3d {
+          text-transform: uppercase;
+          font-size: 50px;
+          color:#eee;
+          position: relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50% ,-50%);
+          text-shadow:
+                          0 1px 0 rgb(190,190,190),
+                          0 2px 0 rgb(185,185,185),
+                          0 3px 0 rgb(180,180,180),
+                          0 4px 0 rgb(175,175,175),
+                          0 5px 0 rgb(170,170,170),
+                          0 6px 0 rgb(165,165,165),
+                          0 7px 0 rgb(160,160,160),
+                          0 1px 5px rgba(0,0,0,.05),
+                          0 3px 5px rgba(0,0,0,.10),
+                          0 5px 10px rgba(0,0,0,.15),
+                          0 7px 10px rgba(0,0,0,.20),
+                          0 10px 15px rgba(0,0,0,.25);
+          transition: all 0.3s ease-in-out;        
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <center>
+    <p>Wallace Boone Haese - 20181116271</p>
+    <br><h1 class="text-3d">Dias Intermediários</h1> 
+      <b><p>Primeiro <input type="text" id="valor1"></p>    
+      <b><p>Último <input type="text" id="valor2"></p>
+      <b><p>Dias <input name="dias" id="dias"></p>
+      <input class="btn-warning" id="botao" type="button" value="Calcular" onClick=Calc()></input><br>
+
+  <script>
+    function Calc(){
+      var num1 = parseInt(document.getElementById('valor1').value);
+      var num2 = parseInt(document.getElementById('valor2').value);
+      var a = 1;
+      for (i = num1; i < num2; i++) {
+        //var a = a+1;        
+        document.getElementById('dias').value += i+", ";
+      }
+        /*  background-image: linear-gradient(to bottom right, red, yellow);
+        }
+
+        */
+    }
+
+    
+    
+  </script>
+
+
+    </center>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href=https://cdn1.iconfinder.com/data/icons/social-media-vol-1/24/_w-512.png type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <title>Par / Impar</title>
+    <style>
+      body{
+        background-image: radial-gradient(circle, #c6c2c6, #c6a5c6, #ba87ba, #706ab7);      
+        }
+        .text-3d {
+          text-transform: uppercase;
+          font-size: 50px;
+          color:#eee;
+          position: relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50% ,-50%);
+          text-shadow:
+                          0 1px 0 rgb(190,190,190),
+                          0 2px 0 rgb(185,185,185),
+                          0 3px 0 rgb(180,180,180),
+                          0 4px 0 rgb(175,175,175),
+                          0 5px 0 rgb(170,170,170),
+                          0 6px 0 rgb(165,165,165),
+                          0 7px 0 rgb(160,160,160),
+                          0 1px 5px rgba(0,0,0,.05),
+                          0 3px 5px rgba(0,0,0,.10),
+                          0 5px 10px rgba(0,0,0,.15),
+                          0 7px 10px rgba(0,0,0,.20),
+                          0 10px 15px rgba(0,0,0,.25);
+          transition: all 0.3s ease-in-out;        
+          cursor: pointer;
+        }
+        #text{
+          font-size: 10px;
+          top: 10%; 
+          left: 10%;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <center>
+    <p>Wallace Boone Haese - 20181116271</p>
+    <br><h1 class="text-3d">Par ou impar?</h1>
+      <b><p>Primeiro <input type="text" id="valor1"></p>    
+      <b><p>Segundo<input type="text" id="valor2"></p>
+      <b><p>Valores <input name="dias" id="dias"></p>
+      <input class="btn-warning" id="botao" type="button" value="Par" onClick=Par()></input>
+      <input class="btn-warning" id="botao" type="button" value="Impar" onClick=Impar()></input><br>
+
+  <script>
+    function Par(){
+      var num1 = parseInt(document.getElementById('valor1').value);
+      var num2 = parseInt(document.getElementById('valor2').value);
+      document.getElementById('dias').value='';
+      for (i = num1; i < num2; i++) {
+        if (i%2 == 0) {
+          //document.write(i);
+          document.getElementById('dias').value += i +", ";
+        }
+      } 
+    }
+    function Impar(){
+      var num1 = parseInt(document.getElementById('valor1').value);
+      var num2 = parseInt(document.getElementById('valor2').value);
+      document.getElementById('dias').value='';
+      for (i = num1; i < num2; i++) {
+        if (i%2 == 1) {
+          //document.write(i);
+          document.getElementById('dias').value += i +", ";
+        }
+      } 
+    }
+  
+    
+    
+  </script>
+
+
+    </center>
+
+    
+  </body>
+</html>

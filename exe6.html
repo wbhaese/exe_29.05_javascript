@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href=https://cdn1.iconfinder.com/data/icons/social-media-vol-1/24/_w-512.png type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <title>JavaScript</title>
+    <style>
+      body{
+        background-image: radial-gradient(circle, #ceb19c, #cc9c7a, #b77140, #a5531a);      
+      }
+        .text-3d {
+          text-transform: uppercase;
+          font-size: 50px;
+          color:#eee;
+          position: relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50% ,-50%);
+          text-shadow:
+                          0 1px 0 rgb(190,190,190),
+                          0 2px 0 rgb(185,185,185),
+                          0 3px 0 rgb(180,180,180),
+                          0 4px 0 rgb(175,175,175),
+                          0 5px 0 rgb(170,170,170),
+                          0 6px 0 rgb(165,165,165),
+                          0 7px 0 rgb(160,160,160),
+                          0 1px 5px rgba(0,0,0,.05),
+                          0 3px 5px rgba(0,0,0,.10),
+                          0 5px 10px rgba(0,0,0,.15),
+                          0 7px 10px rgba(0,0,0,.20),
+                          0 10px 15px rgba(0,0,0,.25);
+          transition: all 0.3s ease-in-out;        
+          cursor: pointer;
+        }
+        .input2{
+          width: 200px;
+        }        
+    </style>
+  </head>
+  <body>
+    <center>
+    <p>Wallace Boone Haese - 20181116271</p>
+    <br><h1 class="text-3d">Busca palavras</h1>
+
+    <b><p>Palavra: <input class="input2"  id="valor1" type="text" placeholder="Digite aqui"></input></p>
+    <b><p>Onde está: <input class="input2"  id="valor2" placeholder=""></input></p>
+    <input class="btn-warning" id="botao" type="button" value="Procurar" onclick=Calc()></input><br> 
+
+    
+
+      
+
+  <script>
+
+    function Calc() {
+      var valor1 = document.getElementById('valor1').value;
+      console.log(valor1);
+      var txt = "Teste 1 4 olá você * tudo bem oi $ @";
+      console.log(txt);
+      var texto = txt.search(valor1);
+      console.log(texto);
+      document.getElementById('valor2').value = "Se encontra na posição "+texto;
+    }
+    //function Calc(){ }
+      /*var valor1 = parseFloat(document.getElementById('valor1').value);
+      var valor2 = parseFloat(document.getElementById('valor2').value);
+      var valor3 = parseFloat(document.getElementById('valor3').value);
+      var media = parseFloat((valor1+valor2+valor3) / 3);
+      parseFloat(document.getElementById('media').value = media);  
+      
+      function Calc() {
+      var valor1 = parseFloat(document.getElementById('valor1').value);
+      var valor2 = parseFloat(document.getElementById('valor2').value);
+      var media = parseFloat((valor1+valor2) / 2);
+      parseFloat(document.getElementById('media').value = media.toFixed(2));
+      }*/
+
+  </script>
+  </center>
+  </body>
+</html>

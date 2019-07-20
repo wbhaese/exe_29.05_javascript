@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href=https://cdn1.iconfinder.com/data/icons/social-media-vol-1/24/_w-512.png type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <title>Cálculo de IMC</title>
+    <style>
+      body{
+        background-image: radial-gradient(circle, #858089, #858089, #7a6c87, #766287, #705687);      
+      }
+        .text-3d {
+          text-transform: uppercase;
+          font-size: 50px;
+          color:#eee;
+          position: relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50% ,-50%);
+          text-shadow:
+                          0 1px 0 rgb(190,190,190),
+                          0 2px 0 rgb(185,185,185),
+                          0 3px 0 rgb(180,180,180),
+                          0 4px 0 rgb(175,175,175),
+                          0 5px 0 rgb(170,170,170),
+                          0 6px 0 rgb(165,165,165),
+                          0 7px 0 rgb(160,160,160),
+                          0 1px 5px rgba(0,0,0,.05),
+                          0 3px 5px rgba(0,0,0,.10),
+                          0 5px 10px rgba(0,0,0,.15),
+                          0 7px 10px rgba(0,0,0,.20),
+                          0 10px 15px rgba(0,0,0,.25);
+          transition: all 0.3s ease-in-out;        
+          cursor: pointer;
+        }
+        .input2{
+          width: 50px;
+        }
+        .img2:hover{
+          transform: translate(-1% ,-1%);
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <center>
+    <p>Wallace Boone Haese - 20181116271</p>
+    <br><h1 class="text-3d">Cálculo de IMC</h1>     
+      <b><p>Altura: <input class="input2" type="number" id="altura" value="0"></input></p>
+    <b><p>Peso: <input class="input2" type="number" id="peso" value="0"></input></p><br>
+
+    <input class="btn-warning" id="botao" type="button" value="Calcular" onclick=Calc()></input><br>
+
+    <h3>Tabela para referência:</h3>
+        <img class="img2" style="border-radius: 20px" src="https://minutosaudavel.com.br/wp-content/uploads/2017/11/imc-tabela-minuto-saudavel.jpg"></img>
+      
+
+  <script>
+    function Calc(){
+      var altura = document.getElementById('altura').value;
+      var peso = document.getElementById('peso').value;
+      if (altura == 0 || peso == 0) {
+        alert("Preencha todos os campos");
+      }else{
+        var imc = peso / (altura * altura);
+        if (imc <17) {
+          situacao = "com magreza grave"; 
+        }else if (imc >= 17 && imc <=18.4){
+          situacao = "abaixo do peso";
+        }else if (imc >= 18.5 && imc <=24.99){
+          situacao = "com peso normal";
+        }else if (imc >= 25 && imc <=29.99){
+          situacao = "acima do peso";
+        }else if (imc >= 30 && imc <=34.99){
+          situacao = "com obesidade I";
+        }else if (imc >= 35 && imc <=39.99){
+          situacao = "com obesidade severa";
+        }else if (imc >= 40){
+          situacao = "com obesidade Mórbida";
+        }else{
+          situacao = "error";
+        }
+        alert("O seu IMC é igual a "+imc.toFixed(2)+" - Você está "+situacao); 
+      }
+    }
+  </script>
+
+
+    </center>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.js"></script>
+    </footer>
+  </body>
+</html>
